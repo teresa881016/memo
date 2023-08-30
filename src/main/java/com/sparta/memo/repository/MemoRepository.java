@@ -10,6 +10,7 @@ import java.util.List;
 public interface MemoRepository extends JpaRepository<Memo, Long> { //DB 작업
 
     List<Memo> findAllByOrderByModifiedAtDesc();
+    List<Memo> findAllByContentsContainsOrderByModifiedAtDesc(String keyword);
 
 
 
